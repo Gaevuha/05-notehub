@@ -1,0 +1,1 @@
+import './NoteList.module.css';
