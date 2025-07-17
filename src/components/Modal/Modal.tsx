@@ -15,9 +15,11 @@ export default function Modal({ onClose, children }: ModalProps) {
       }
     };
 
-    window.addEventListener("keydown", handleEsc);
+      window.addEventListener("keydown", handleEsc);
+      document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "";
     };
   }, [onClose]);
 
